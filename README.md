@@ -12,7 +12,7 @@ Sistem pentru preluarea din baza de date a progresului, inițializând jucătoru
 
 Tehnologii folosite : 
 Vanilla HTML/CSS
-Node.js pentru backend
+Node.js cu Express pentru backend
 PostgreSQL pentru baza de date.
 
 API endpoints pentru înregistrare, logare, salvare și preluare a datelor.
