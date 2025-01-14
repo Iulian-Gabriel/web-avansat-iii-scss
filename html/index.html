@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poro Snackonomics</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div id="welcome-container">
+        <h1 id="welcome-message">Welcome, please register!</h1>
+    </div>
+</header>
+<div id="top-buttons">
+    <button id="sign-up-button">Sign Up</button>
+    <button id="sign-in-button">Log In</button>
+    <button id="logout-button" style="display: none;">Logout</button>
+</div>
+
+  <div id="sign-up-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-sign-up">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="sign-up-form" class="auth-form">
+        <label for="sign-up-username">Username:</label>
+        <input type="text" id="sign-up-username" name="username" required>
+        <label for="sign-up-password">Password:</label>
+        <input type="password" id="sign-up-password" name="password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  
+  <div id="sign-in-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-sign-in">&times;</span>
+      <h2>Log In</h2>
+      <form id="sign-in-form" class="auth-form">
+        <label for="sign-in-username">Username:</label>
+        <input type="text" id="sign-in-username" name="username" required>
+        <label for="sign-in-password">Password:</label>
+        <input type="password" id="sign-in-password" name="password" required>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="metrics-box" id="currency-metrics">
+    <h2>Current Currencies</h2>
+    <p>Snax Amount: <span id="snax-amount">0</span></p>
+    <p>Snax per Click: <span id="snax-per-click">1</span></p>
+    <p>Snax per Second: <span id="snax-per-second">0</span></p>
+    <p id="prestige-points">Prestige Points: <span id="prestige-currency">0</span></p>
+    <p id="prestiges-container">Prestiges: <span id="prestiges">0</span></p>
+  </div>
+
+  <div class="container" id="main-container">
+    <div class="menu-button-container">
+      <button id="menu-button"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="main-menu" class="main-menu">
+      <div class="menu-content"> 
+        <div class="menu-item" id="upgrades-menu"><i class="fas fa-arrow-up"></i> Upgrades</div>
+        <div class="menu-item" id="prestige-upgrades-menu"><i class="fas fa-star"></i> Prestige Upgrades</div>
+        <div class="menu-item" id="save-game"><i class="fas fa-save"></i> Save</div>
+        <div class="menu-item" id="load-game"><i class="fas fa-upload"></i> Load</div>
+        <div class="menu-item" id="close-menu"><i class="fas fa-times"></i></div>
+      </div>
+    </div>
+
+    <div id="upgrades-submenu" class="submenu">
+      <div class="menu-content">
+        <button class="menu-item" id="Upgrade1" title="Increase Snax per Click by 1"><i class="fas fa-arrow-up"></i> Upgrade 1</button>
+        <button class="menu-item" id="Upgrade2" title="Increase Snax per Click by 5"><i class="fas fa-arrow-up"></i> Upgrade 2</button>
+        <button class="menu-item" id="Upgrade3" title="Increase Snax per Second by 10"><i class="fas fa-arrow-up"></i> Upgrade 3</button>
+        <button class="menu-item" id="Upgrade4" title="Increase Snax per Second by 50"><i class="fas fa-arrow-up"></i> Upgrade 4</button>
+        <button class="menu-item" id="back-to-main-menu"><i class="fas fa-arrow-left"></i> Back</button>
+      </div>
+    </div>
+
+    <div id="prestige-submenu" class="submenu">
+      <div class="menu-content">
+        <div class="menu-item" id="PrestigeUpgrade1" title="Double Snax per Click"><i class="fas fa-star"></i> P Upgrade 1</div>
+        <div class="menu-item" id="PrestigeUpgrade2" title="Increase Snax per Second Multiplier by 4"><i class="fas fa-star"></i> P Upgrade 2</div>
+        <div class="menu-item" id="PrestigeUpgrade3" title="Increase Prestige Currency Multiplier by 2"><i class="fas fa-star"></i> P Upgrade 3</div>
+        <div class="menu-item" id="back-to-main-menu-from-prestige"><i class="fas fa-arrow-left"></i> Back</div>
+      </div>
+    </div>
+
+    <div class="game-area">
+      <div class="clicker">
+        <img src="../files/snax.png" class = "snax-image" alt="Clicker Image" draggable="false" id="clicker-image">
+        <div class="prestige-rebirth-buttons">
+          <button id="prestige-button">Prestige</button>
+        </div>
+  </div>
+</div>
+
+<div class="leaderboard-container">
+  <h2>Leaderboard</h2>
+  <ul id="leaderboard"></ul>
+</div>
+
+  <img id="braum-visible-image" src="../files/hoys0hilr4171-removebg-preview.png" alt="Half Visible Image">
+  <img id="furnace-visible-image" src="../files/furnace-removebg-preview.png" alt="Half Visible Image">
+
+  <script src="../scripts/logic/mainlogic.js"></script>
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/logic/server.js"></script>
+</body>
+</html>
